@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form action='Dataret.asmx/Getdata'
+          method="post" target="_blank">
+        <table>
+            <tr>
+                <td>Enter ID to get Username</td>
+                <td>
+                    <input class="frmInput" type="number" size="30" name="codes">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="right">
+                    <input type="submit" value="Submit" class="button">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form action='Dataret.asmx/Putdata'
+          method="post" target="_blank">
+        <table>
+            <tr>
+                <td>Enter Name,Email,Password and Gender</td>
+                <td>
+                    Name: <input class="frmInput" type="text" size="30" name="n">
+                    Email: <input class="frmInput" type="text" size="30" name="e">
+                    Password: <input class="frmInput" type="text" size="30" name="p">
+                    Gender: <input class="frmInput" type="text" size="30" name="g">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="right">
+                    <input type="submit" value="Submit" class="button">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

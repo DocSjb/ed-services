@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Attendence</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">                                    
+    <link rel="stylesheet" href="../css/hero-slider-style.css">                              
+    <link rel="stylesheet" href="../css/templatemo-style.css">                                 
+
+
+</head>
+
+    <body>
+    <div style="background-color:#f0f0f0">
+		<img style="height:100px; margin-left:10%"src="../images/srmlogo.png" />	
+	</div>
+        <section class="cd-hero">
+            <ul class="cd-hero-slider">  
+            
+                <li class="selected" style="background-color:#2ecc71">
+                    <div class="cd-full-width">
+                        <div class="tm-slide-content-div">
+                            <form action="dh2.asmx/cas" id="search-form">
+                                
+                                <h2 class="text-uppercase">Give Attendance</h2>
+                                <div class="form-group">
+                                    <input name="i" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="ID"><br>
+                                    <input name="u" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="Username"><br>
+                                    <input name="p" type="password" class="form-control center-block tm-max-w-400" id="input1" placeholder="Password"><br>
+                                    <input name="c" type="text" class="form-control center-block tm-max-w-400" id="input3" style="background-color: #E7E6E6;color: #B0B0B0;" type="text" value="SRM" readonly><br>
+                                    <input name="s" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="Subject"><br>
+                                    <input name="k" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder=" Key"><br>
+                                    
+                              </div>                                
+                                <button type="submit" class="cd-btn">Submit</button>
+                                
+                            </form>                            
+                        </div>                        
+                    </div> <!-- .cd-full-width -->
+                </li>
+
+                <li>
+                     <div class="cd-full-width">
+                        <div class="tm-slide-content-div">
+                            <form action="dh2.asmx/getat" id="search-form">
+                                
+                                <h2 class="text-uppercase">Get Attendance</h2>
+                                <div class="form-group">
+                                    <input name="id" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="ID"><br>
+                                    <input name="u" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="Username"><br>
+                                    <input name="p" type="password" class="form-control center-block tm-max-w-400" id="input1" placeholder="Password"><br>
+                                    <input name="c" type="text" class="form-control center-block tm-max-w-400" id="input3" style="background-color: #E7E6E6;color: #B0B0B0;" type="text" value="SRM" readonly><br>
+                                    <input name="s" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="Subject	"><br>
+                              </div>                                
+                                <button type="submit" class="cd-btn">Submit</button>
+                                
+                            </form>                            
+                        </div>                        
+                    </div> <!-- .cd-full-width -->
+                </li>
+            </ul> <!-- .cd-hero-slider -->
+
+            <div class="cd-slider-nav">
+                <nav>
+                    <span class="cd-marker item-1"></span>
+                    
+                    <ul>
+                        <li class="selected"><a href="#0"></a></li>
+                        <li><a href="#0"></a></li>                     
+                    </ul>
+                </nav> 
+            </div> <!-- .cd-slider-nav -->
+        </section> <!-- .cd-hero -->
+
+        
+
+        <!-- load JS files -->
+        <script src="../js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) --> 
+        <script src="../js/bootstrap.min.js"></script>                 <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+        <script src="../js/hero-slider-script.js"></script>            <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+        <script src="../js/jquery.touchSwipe.min.js"></script>         <!-- http://labs.rampinteractive.co.uk/touchSwipe/demos/ -->
+        <script>     
+       
+            $(document).ready(function(){              
+                $('.carousel').carousel({
+                  interval: 3000
+                })
+                if($(window).width() <= 991) {
+                    $(".carousel-inner").swipe( {
+                        //Generic swipe handler for all directions
+                        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                            $(this).parent().carousel('next'); 
+                        },
+                        swipeRight: function() {
+                            $(this).parent().carousel('prev'); 
+                        },
+                        //Default is 75px, set to 0 for demo so any distance triggers swipe
+                        threshold:0
+                    });
+                }  
+
+                /* Handle window resize */
+                $(window).resize(function(){
+                    if($(window).width() <= 991) {
+                        $(".carousel-inner").swipe( {
+                            //Generic swipe handler for all directions
+                            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                                $(this).parent().carousel('next'); 
+                            },
+                            swipeRight: function() {
+                                $(this).parent().carousel('prev'); 
+                            },
+                            //Default is 75px, set to 0 for demo so any distance triggers swipe
+                            threshold:0
+                        });
+                     }
+                });                             
+            });
+
+        </script>             
+
+</body>
+</html>
